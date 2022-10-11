@@ -27,6 +27,7 @@ class CreateOrdersTable extends Migration
             $table->string('charges');
             $table->string('total');
             $table->string('order_status');
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

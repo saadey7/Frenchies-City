@@ -19,6 +19,7 @@ class Order extends Model
         'charges',
         'total',
         'order_status',
+        'status'
     ];
 
     protected $casts = [

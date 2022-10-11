@@ -11,11 +11,12 @@ $breed = Breed::all();
 .scrollar::-webkit-scrollbar {
     display: none;
 }
-.button{
+
+.button {
     display: block;
     width: 100%;
     background: none;
-    border:none;
+    border: none;
     padding: 13px 10px;
     clear: both;
     font-size: 15px;
@@ -24,11 +25,12 @@ $breed = Breed::all();
     color: #fff;
     white-space: nowrap;
     border-radius: 0px;
-    padding-top: 20px!important;
-    padding-bottom: 20px!important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
     transition: all .2s ease-in-out;
 }
-.button:hover{
+
+.button:hover {
     background-color: #ffedbb;
 }
 </style>
@@ -42,7 +44,7 @@ $breed = Breed::all();
             <div class="navbar-brand navbar-brand-centered page-scroll">
                 <a href="#page-top">
                     <!-- logo  -->
-                    <img src="{{asset('public/Web/img/logo (2).png')}}" class="img-responsive" alt="">
+                    <img src="{{asset('public/Web/img/logo (2).png')}}" class="img-responsive" alt="" style="left: 0%;">
                 </a>
             </div>
         </div>
@@ -98,8 +100,12 @@ $breed = Breed::all();
                 </li>
                 <li><a href="/contactus">Contact</a></li>
                 @auth
+                <li>
+                    <a data-toggle="modal" data-target="#sell"> Sell Puppy </a>
+                </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="far fa-user-circle" style="font-size:20px; color:#fff;"></i><b class="caret"></b></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="far fa-user-circle"
+                            style="font-size:20px; color:#fff;"></i><b class="caret"></b></a>
                     <ul class="dropdown-menu scrollar">
                         <li><a href="#">My Profile</a></li>
                         <li><a href="#">My Favourites</a></li>

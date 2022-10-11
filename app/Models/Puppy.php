@@ -9,6 +9,7 @@ class Puppy extends Model
 {
     use HasFactory;
     protected $fillable=[
+        'user_id',
         'puppy_name',
         'puppy_breed',
         'puppy_price',
@@ -21,8 +22,19 @@ class Puppy extends Model
         'puppy_color',
         'puppy_short_description',
         'puppy_long_description',
+        'meetup_address',
+        'meetup_address1',
+        'status'
     ];
 
+    protected $casts=[
+        'user_id' => 'integer'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 
     public function getPuppyImageAttribute($value)
     {

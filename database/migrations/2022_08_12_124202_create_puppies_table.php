@@ -15,6 +15,8 @@ class CreatePuppiesTable extends Migration
     {
         Schema::create('puppies', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('puppy_name')->nullable();
             $table->string('puppy_breed')->nullable();
             $table->string('puppy_price')->nullable();
@@ -27,6 +29,9 @@ class CreatePuppiesTable extends Migration
             $table->string('puppy_color')->nullable();
             $table->longText('puppy_short_description')->nullable();
             $table->longText('puppy_long_description')->nullable();
+            $table->text('meetup_address')->nullable();
+            $table->text('meetup_address1')->nullable();
+            $table->boolean('status')->defualt(0);
             $table->timestamps();
         });
     }
